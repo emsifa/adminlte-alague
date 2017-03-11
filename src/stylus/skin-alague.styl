@@ -1,0 +1,28 @@
+@import 'partials/variables.styl'
+@import 'partials/mixins.styl'
+
+.skin-alague
+  navbar-variant(white, $fg-color, 5%)
+  navbar-shadow(0px 0px 15px rgba(0,0,0,.25))
+  
+  sidebar-variant(white, $fg-color)
+  sidebar-nav-rounded(white, $fg-color, darken(white, 5%), $fg-color)
+
+  .content-wrapper, .right-side
+    background-color darken(white, 5%)
+
+  // Options
+  &.navbar-blue
+    navbar-variant($blue, white)
+    
+  &.navbar-black
+    navbar-variant($fg-color, white)
+    
+  &.sidebar-blue
+    sidebar-variant($blue, white)
+    
+  &.sidebar-red
+    sidebar-variant($red, white)
+    
+  &.sidebar-black
+    sidebar-variant($fg-color, white)

@@ -1,0 +1,89 @@
+// Navbar Coloring
+navbar-variant($bg-color, $fg-color = #fff, $shade-percent = 10%)
+  .main-header .logo
+      background-color $bg-color
+      color $fg-color
+  
+  .main-header .navbar
+    background-color $bg-color
+    color $fg-color 
+  
+    .sidebar-toggle
+      color $fg-color
+      &:hover
+        background-color darken($bg-color, $shade-percent)
+      
+    .nav 
+      > li 
+        > a 
+          color $fg-color
+      > li:hover > a,
+      > li > a:focus,
+      > .open > a, 
+      > .open > a:focus, 
+      > .open > a:hover
+        background-color darken($bg-color, $shade-percent)
+        color $fg-color
+        
+// Shadowing Navbar
+navbar-shadow($box-shadow)
+  .main-header
+    box-shadow $box-shadow
+
+// Sidebar Coloring
+sidebar-variant($bg-color, $fg-color = #fff)
+  .main-sidebar, .left-side
+    background-color $bg-color
+    color $fg-color
+  
+  .user-panel > .info, .user-panel > .info > a
+    color $fg-color
+  
+  .sidebar a
+    color $fg-color
+  
+  .sidebar-menu > li:hover > a, 
+  .sidebar-menu > li.active > a
+    color $fg-color
+    background-color darken($bg-color, 5%)
+    border-left-color darken($bg-color, 5%)
+    
+  .sidebar-menu > li > .treeview-menu
+    background-color $bg-color
+    li > a 
+      color $fg-color
+
+  .sidebar-menu > li.header 
+    background-color $bg-color
+    
+  .sidebar-form
+    padding 10px
+
+  .sidebar-form input[type="text"], 
+  .sidebar-form .btn
+    background-color darken($bg-color, 5%)
+    border 1px solid darken($bg-color, 5%)
+    
+sidebar-nav-rounded($bg-color, $fg-color, $bg-active-color, $fg-active-color)
+  ul.sidebar-menu
+    box-sizing border-box
+    padding 10px
+    li
+      margin-bottom 5px
+      > a 
+        border-radius 3px
+        background-color $bg-color
+        color $fg-color
+        
+      &.active
+        > a
+          background-color $bg-active-color
+          color $fg-active-color
+      
+  &.sidebar-collapse
+    ul.sidebar-menu
+      padding 0px
+      li 
+        margin-bottom 0px
+        > a 
+          border-radius 0px

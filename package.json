@@ -1,0 +1,23 @@
+{
+  "name": "adminlte-alague",
+  "version": "1.0.0",
+  "description": "AdminLTE Alague Skin",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-stylus": "^2.6.0"
+  },
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.13.0",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Syifa",
+  "license": "MIT"
+}
