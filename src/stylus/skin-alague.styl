@@ -20,6 +20,37 @@
   .box
     box-shadow 0px 0px 10px 0px rgba(0,0,0,.10)
 
+  .btn
+    &.btn-default
+      button-variant(darken(white, 10%), $fg-color, 10%)
+      
+    &.btn-primary
+      button-variant($blue, white)
+      
+    &.btn-info
+      button-variant(lighten($blue, 15%), white)
+      
+    &.btn-success
+      button-variant($green, white)
+      
+    &.btn-danger
+      button-variant($red, white)
+      
+    &.btn-warning
+      button-variant($orange, white)
+      
+    &.btn-rounded
+      border-radius 100px
+      
+    &.btn-app, &.btn-social, &.btn-social-icon
+      border none
+      
+    &.btn-social
+      i
+        padding-left 5px
+        padding-right 5px
+        width 40px
+
   navbar-variant(white, $fg-color, 5%)
   navbar-shadow(0px 0px 15px rgba(0,0,0,.25))
   

@@ -91,3 +91,31 @@ sidebar-nav-rounded($bg-color, $fg-color, $bg-active-color, $fg-active-color)
 sidebar-shadow($box-shadow)
   .main-sidebar
     box-shadow $box-shadow
+    
+button-variant($bg-color, $fg-color, $shade-percent = 15%)
+  background-color $bg-color
+  border-color $bg-color
+  color $fg-color
+  
+  &:hover,
+  &.active,
+  &:active,
+  &:focus
+    border-color darken($bg-color, $shade-percent)
+    background-color darken($bg-color, $shade-percent)
+    
+  &[disabled]:hover,
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled].active, 
+  &.disabled:hover,
+  &.disabled:active,
+  &.disabled:focus,
+  &.disabled.active 
+    background-color $bg-color
+    border-color $bg-color
+    color $fg-color
+    
+    
+
+    
