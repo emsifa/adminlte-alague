@@ -68,7 +68,7 @@ sidebar-nav-rounded($bg-color, $fg-color, $bg-active-color, $fg-active-color)
   ul.sidebar-menu
     box-sizing border-box
     padding 10px
-    li
+    > li
       margin-bottom 5px
       > a 
         border-radius 3px
@@ -83,7 +83,7 @@ sidebar-nav-rounded($bg-color, $fg-color, $bg-active-color, $fg-active-color)
   &.sidebar-collapse
     ul.sidebar-menu
       padding 0px
-      li 
+      >li 
         margin-bottom 0px
         > a 
           border-radius 0px
@@ -116,6 +116,26 @@ button-variant($bg-color, $fg-color, $shade-percent = 15%)
     border-color $bg-color
     color $fg-color
     
+button-outline-variant($border-color, $shade-percent = 15%)
+  border-color $border-color
+  color $border-color
+  
+  &:hover,
+  &.active,
+  &:active,
+  &:focus
+    border-color darken($border-color, $shade-percent)
+    
+  &[disabled]:hover,
+  &[disabled]:active,
+  &[disabled]:focus,
+  &[disabled].active, 
+  &.disabled:hover,
+  &.disabled:active,
+  &.disabled:focus,
+  &.disabled.active 
+    border-color $border-color
+    color $border-color    
     
 
     
